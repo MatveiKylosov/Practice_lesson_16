@@ -45,7 +45,7 @@
 распорядка обучающихся в данном образовательном&#x0a; учреждении, с Уставом Техникума ознакомлен(а)." Margin="22, 360, 0, 0" 
                       HorizontalAlignment="Left" VerticalAlignment="Top"  FontSize="12"/>
             <CheckBox Content="С датой представления оригиналов документов ознакомлен(а)." Margin="22, 410, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" />
-            <Button Content="Продолжить"  HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" />
+            <Button Content="Продолжить" Click="Click_Next" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" />
         </Grid>
     </Grid>
 </Page>

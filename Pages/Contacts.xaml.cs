@@ -24,5 +24,9 @@ namespace Submission_of_Applications_Kylosov.Pages
         {
             InitializeComponent();
         }
+        private void Click_Next(object sender, RoutedEventArgs e)
+        {
+            MainWindow.main.NextPage();
+        }
     }
 }

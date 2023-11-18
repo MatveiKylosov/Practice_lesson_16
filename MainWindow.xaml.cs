@@ -20,9 +20,28 @@ namespace Submission_of_Applications_Kylosov
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Page> pages = new List<Page>();
+        int i = 0;
+        public static MainWindow main;
         public MainWindow()
         {
             InitializeComponent();
+            main = this;
+            pages.Add(new Pages.Statement());
+            pages.Add(new Pages.Education());
+            pages.Add(new Pages.Status());
+            pages.Add(new Pages.Speciality());
+            pages.Add(new Pages.Passport());
+            pages.Add(new Pages.Contacts());
+            pages.Add(new Pages.Parents());
+
+            NextPage();
+        }
+
+        public void NextPage()
+        {
+            i = i == pages.Count ? 0 : i;
+            frame.Navigate(pages[i++]);
         }
     }
 }

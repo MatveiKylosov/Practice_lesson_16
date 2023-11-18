@@ -40,7 +40,7 @@
             <Label Content="Год окончания образовательной организации"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,266,0,0"/>
             <TextBox Height="24" Margin="12,291,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"
                      />
-            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" />
+            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" Click="Click_Next" />
         </Grid>
     </Grid>
 </Page>

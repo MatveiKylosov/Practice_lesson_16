@@ -28,7 +28,7 @@
             <Label Content="Электронный адрес:"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,100,0,0" Width="147"/>
             <TextBox Height="24" Margin="0,130,0,0" TextWrapping="Wrap"  Text="" VerticalAlignment="Top" HorizontalAlignment="Center"
          Width="740"/>
-            <Button Content="Продолжить" Click="Click_Next" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" />
+            <Button  Content="Продолжить" Click="Click_Next" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" />
         </Grid>
     </Grid>
 </Page>
