@@ -1,0 +1,60 @@
+﻿<Page x:Class="Submission_of_Applications_Kylosov.Pages.Parents"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Submission_of_Applications_Kylosov.Pages"
+      mc:Ignorable="d" d:DesignWidth="792"
+      Title="Parents" Height="790">
+
+    <Grid Background="#F8F9FA">
+        <Grid Margin="0,0,0,730" Background="White">
+            <Image HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top"
+           Width="40" Source="/Submission_of_Applications_Kylosov;component/logo.png"/>
+            <Label Content="Электронная приемная компания" HorizontalAlignment="Left" Margin="55,1,0,0"
+           VerticalAlignment="Top" FontWeight="Bold" FontSize="19" />
+            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" HorizontalAlignment="Left" Margin="55,24,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid Margin="0,60,0,-0.4">
+            <ScrollViewer>
+                <Grid Background="#F8F9FA" Height="710">
+                    <Label Content="Сведения о родителях (законных представителях):" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"  FontWeight="Bold"/>
+                    <Label Content="Если родитель один, заполнить данные на одного родителя" FontSize="10" HorizontalAlignment="Left" Margin="20,25,0,0" VerticalAlignment="Top" />
+                    <Label Content="Мать (или законный представитель):" FontSize="12" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top"  FontStyle="Italic"/>
+                    <Label Content="Фамилия, имя, отчество (полностью):" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,95,0,0" Width="700" Height="20" />
+                    <Label Content="Дата рождения:" HorizontalAlignment="Left" Margin="20,115,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,140,0,0" Width="700" Height="20" />
+                    <Label Content="Место работы:" HorizontalAlignment="Left" Margin="20,160,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,185,0,0" Width="700" Height="20" />
+                    <Label Content="Должность:" HorizontalAlignment="Left" Margin="20,205,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,230,0,0" Width="700" Height="20" />
+                    <Label Content="Место жительства:" HorizontalAlignment="Left" Margin="20,250,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,275,0,0" Width="700" Height="20" />
+                    <Label Content="Домашний телефон (при наличии):" HorizontalAlignment="Left" Margin="20,295,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,320,0,0" Width="360" Height="20" />
+                    <Label Content="Мобильный телефон (при налчии):" HorizontalAlignment="Left" Margin="420,295,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="395,320,0,0" Width="325" Height="20" />
+                    <CheckBox Content="Настоящим подтверждаю, что персональные данные на третьих лиц..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 345, 0, 0" />
+                    <Label Content="Отец (или законный представитель):" FontSize="12" HorizontalAlignment="Left" Margin="10,360,0,0" VerticalAlignment="Top"  FontStyle="Italic"/>
+                    <Label Content="Фамилия, имя, отчество (полностью):" HorizontalAlignment="Left" Margin="20,380,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,405,0,0" Width="700" Height="20" />
+                    <Label Content="Дата рождения:" HorizontalAlignment="Left" Margin="20,425,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,450,0,0" Width="700" Height="20" />
+                    <Label Content="Место работы:" HorizontalAlignment="Left" Margin="20,470,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,495,0,0" Width="700" Height="20" />
+                    <Label Content="Должность:" HorizontalAlignment="Left" Margin="20,515,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,540,0,0" Width="700" Height="20" />
+                    <Label Content="Место жительства:" HorizontalAlignment="Left" Margin="20,560,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,585,0,0" Width="700" Height="20" />
+                    <Label Content="Домашний телефон (при наличии):" HorizontalAlignment="Left" Margin="20,605,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,630,0,0" Width="360" Height="20" />
+                    <Label Content="Мобильный телефон (при налчии):" HorizontalAlignment="Left" Margin="420,605,0,0" VerticalAlignment="Top" />
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="395,630,0,0" Width="325" Height="20" />
+                    <Button Content="Продолжить" Click="Click_Next" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" />
+                    <CheckBox Content="Настоящим подтверждаю, что персональные данные на третьих лиц..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,655,0,0" />
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
