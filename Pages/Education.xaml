@@ -1,0 +1,48 @@
+﻿<Page x:Class="Submission_of_Applications_Kylosov.Pages.Education"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Submission_of_Applications_Kylosov.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="410" d:DesignWidth="792"
+      Title="Education">
+
+    <Grid Background="#F8F9FA">
+        <Grid Margin="0,0,0,349.6" Background="White">
+            <Image HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top"
+                   Width="40" Source="/Submission_of_Applications_Kylosov;component/logo.png"/>
+            <Label Content="Электронная приемная компания" HorizontalAlignment="Left" Margin="55,1,0,0"
+                   VerticalAlignment="Top" FontWeight="Bold" FontSize="19" />
+            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" HorizontalAlignment="Left" Margin="55,24,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid Margin="0,60,0,-0.4">
+            <Label Content="Сведения об образовании" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"  FontWeight="Bold"/>
+            <Label Content="База:" HorizontalAlignment="Left"
+                   Margin="10,41,0,0" VerticalAlignment="Top" />
+            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="20, 67, 0, 0"
+                   VerticalAlignment="Top" Background="{x:Null}" FontSize="10"  Foreground="Red"/>
+            <RadioButton Content="9 классов" Margin="22, 90,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Content="11 классов" Margin="22, 105,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Content="СПО" Margin="22, 120,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Content="ВПО" Margin="22, 135,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="20,150,0,0" VerticalAlignment="Top"
+                   Background="{x:Null}" FontSize="10" Foreground="Red" />
+            <RadioButton Content="Аттестат" Margin="22,171,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Content="Диплом" Margin="22,186,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Серия и номер документа об образовании:" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Margin="10,211,0,0" />
+            <TextBox Height="24" Margin="12,240,400,0" TextWrapping="Wrap"  Text="" VerticalAlignment="Top"/>
+            <Label Content="Средний балл (до сотых):" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,210,0,0"/>
+            <TextBox Height="24" Margin="430,241,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"
+                     />
+            <Button Content="Продолжить" Click="Click_Next" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" />
+            <Label Content="Прикрепите сканы страниц документа об образовании с Ф.И.О., наименование образовательной организации и оценками" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="10,263,0,0" FontSize="11" />
+            <Label Content="(Формат документа должен быть PNG, JPEG или PDF, а максимальный размер каждого файла 5 МБ)" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="20,282,0,0" FontSize="10" />
+            <TextBox Height="24" Margin="12,305,328,0" TextWrapping="Wrap"  Text="" VerticalAlignment="Top"/>
+            <Button Content="Выбрать ..." Margin="469,305,186,21" />
+        </Grid>
+    </Grid>
+</Page>
