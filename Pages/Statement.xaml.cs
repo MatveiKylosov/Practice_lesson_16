@@ -27,6 +27,17 @@ namespace Submission_of_Applications_Kylosov.Pages
 
         private void Click_Next(object sender, RoutedEventArgs e)
         {
+            if(!Classes.CheckRegex.Match(@"^[а-яА-Я ,]+$", tb1.Text))
+            {
+                MessageBox.Show("Не заполнена информация об окончании образовательного учереждении");
+                return;
+            }
+
+            if (!Classes.CheckRegex.Match(@"^\d{4}$", tb2.Text))
+            {
+                MessageBox.Show("Не заполнена информация об годе окончании образовательного учереждении");
+                return;
+            }
             MainWindow.main.NextPage();
         }
     }

@@ -27,21 +27,25 @@ namespace Submission_of_Applications_Kylosov
         {
             InitializeComponent();
             main = this;
-            pages.Add(new Pages.Statement());
-            pages.Add(new Pages.Education());
-            pages.Add(new Pages.Status());
-            pages.Add(new Pages.Speciality());
-            pages.Add(new Pages.Passport());
-            pages.Add(new Pages.Contacts());
-            pages.Add(new Pages.Parents());
-
+            pages = new List<Page>
+                                {
+                                    new Pages.Statement(),
+                                    new Pages.Education(),
+                                    new Pages.Status(),
+                                    new Pages.Speciality(),
+                                    new Pages.Passport(),
+                                    new Pages.Contacts(),
+                                    new Pages.Parents()
+                                };
             NextPage();
         }
 
+
         public void NextPage()
         {
-            i = i == pages.Count ? 0 : i;
-            frame.Navigate(pages[i++]);
+            frame.Navigate(pages[i]);
+            i = (i + 1) % pages.Count;
         }
+
     }
 }

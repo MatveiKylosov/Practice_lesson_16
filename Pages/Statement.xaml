@@ -9,7 +9,7 @@
       Title="Statement">
 
     <Grid Background="#F8F9FA">
-        <Grid Margin="0,0,0,349.6" Background="White">
+        <Grid Background="White" Height="60" VerticalAlignment="Top">
             <Image HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top"
                    Width="40" Source="/Submission_of_Applications_Kylosov;component/logo.png"/>
             <Label Content="Электронная приемная компания" HorizontalAlignment="Left" Margin="55,1,0,0"
@@ -18,29 +18,25 @@
         </Grid>
         <Grid Margin="0,60,0,-0.4">
             <Label Content="Заявление" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"  FontWeight="Bold"/>
-            <Label Content="Прошу принять меня в КГАПОУ Пермский авиационный техникум им. А.Д. Швецова" HorizontalAlignment="Left"
-                   Margin="10,41,0,0" VerticalAlignment="Top" />
-            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="20, 67, 0, 0"
-                   VerticalAlignment="Top" Background="{x:Null}" FontSize="10"  Foreground="Red"/>
-            <CheckBox Content="по очной форме обучения" HorizontalAlignment="Left" Margin="22,98,0,0"
-                      VerticalAlignment="Top" />
-            <CheckBox Content="по заочной форме обучения (обучение только на платной основе)" HorizontalAlignment="Left" Margin="22,113,0,0"
-                      VerticalAlignment="Top" />
-            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="20, 126, 0, 0" VerticalAlignment="Top"
-                   Background="{x:Null}" FontSize="10" Foreground="Red" />
-            <CheckBox Content="за счет бюджета" HorizontalAlignment="Left" VerticalAlignment="Top"
-                      Margin="22,165,0,0" />
-            <CheckBox Content="по договору (платно)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,150,0,0"
-                      />
-            <Label Content="О себе сообщаю следующее:" HorizontalAlignment="Left" VerticalAlignment="Top"
-                   Margin="10, 185, 0, 0" />
-            <Label Content="Окончил (Наименование образовательной организации, город)" HorizontalAlignment="Left" VerticalAlignment="Top"
-                   Margin="10,211,0,0" />
-            <TextBox Height="24" Margin="12,240,10,0" TextWrapping="Wrap"  Text="" VerticalAlignment="Top"/>
+            <Label Content="Прошу принять меня в КГАПОУ Пермский авиационный техникум им. А.Д. Швецова" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" />
+            
+            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="20, 67, 0, 0" VerticalAlignment="Top" Background="{x:Null}" FontSize="10"  Foreground="Red"/>
+            <RadioButton IsChecked="True" Content="по очной форме обучения" HorizontalAlignment="Left" Margin="22,98,0,0" VerticalAlignment="Top"  GroupName="gn1"/>
+            <RadioButton Content="по заочной форме обучения (обучение только на платной основе)" HorizontalAlignment="Left" Margin="22,113,0,0" VerticalAlignment="Top" GroupName="gn1"/>
+            
+            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="20, 126, 0, 0" VerticalAlignment="Top" Background="{x:Null}" FontSize="10" Foreground="Red" />
+            <RadioButton GroupName="gn2" Content="по договору (платно)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,150,0,0"/>
+            <RadioButton IsChecked="True" GroupName="gn2" Content="за счет бюджета" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,165,0,0" />
+
+            <Label Content="О себе сообщаю следующее:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 185, 0, 0" />
+            
+            <Label Content="Окончил (Наименование образовательной организации, город)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,211,0,0" />
+            <TextBox x:Name="tb1" Height="24" Margin="12,240,10,0" TextWrapping="Wrap"  Text="" VerticalAlignment="Top"/>
+            
             <Label Content="Год окончания образовательной организации"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,266,0,0"/>
-            <TextBox Height="24" Margin="12,291,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"
-                     />
-            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" Click="Click_Next" />
+            <TextBox x:Name="tb2" Height="24" Margin="12,291,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            
+            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,320,10,0" VerticalAlignment="Top" Width="150" Height="25" Click="Click_Next" />
         </Grid>
     </Grid>
 </Page>

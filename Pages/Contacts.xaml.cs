@@ -26,6 +26,21 @@ namespace Submission_of_Applications_Kylosov.Pages
         }
         private void Click_Next(object sender, RoutedEventArgs e)
         {
+            if (NumberHome.Text != "" & !Classes.CheckRegex.Match(@"\d{3}-\d{2}-\d{2}$", NumberHome.Text))
+            {
+                MessageBox.Show("Домашний телефон заполнен не корректно");
+                return;
+            }
+            if(!Classes.CheckRegex.Match(@"^\+7-\d{3}-\d{3}-\d{2}-\d{2}$", Phone.Text))
+            {
+                MessageBox.Show("Номер телефон заполнен не корректно");
+                return;
+            }
+            if (!Classes.CheckRegex.Match(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", Email.Text))
+            {
+                MessageBox.Show("Почта заполнена не корректно");
+                return;
+            }
             MainWindow.main.NextPage();
         }
     }

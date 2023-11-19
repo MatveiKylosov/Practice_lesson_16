@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +29,50 @@ namespace Submission_of_Applications_Kylosov.Pages
 
         private void Click_Next(object sender, RoutedEventArgs e)
         {
+            if ((bool)rb1.IsChecked)
+            {
+                string[] arr = path.Text.Split('|');
+                if (path.Text == "" || arr.Length <= 0)
+                {
+                    MessageBox.Show("Не указаны файлы.");
+                    return;
+                }
+                foreach (string filePath in arr)
+                {
+                    if (File.Exists(filePath))
+                    {
+                        FileInfo fileInfo = new FileInfo(filePath);
+                        // Проверка размера файла (5 МБ в байтах)
+                        if (fileInfo.Length > 5 * 1024 * 1024)
+                        {
+                            MessageBox.Show("Выбранный файл слишком большой. Пожалуйста, выберите файл размером не более 5 МБ.");
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Файл " + filePath + " не найден. Пожалуйста, выберите существующий файл.");
+                        return;
+                    }
+                }
+            }
             MainWindow.main.NextPage();
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Multiselect = true;
+            dlg.Filter = "Image Files (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg|PDF Files (*.pdf)|*.pdf";
+            bool? result = dlg.ShowDialog();
+            if (result == true)
+            {
+                // Объединение всех путей в одну строку, разделенную запятыми
+                string allPaths = string.Join("|", dlg.FileNames);
+                path.Text = allPaths;
+            }
+
         }
     }
 }

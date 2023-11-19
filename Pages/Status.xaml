@@ -9,12 +9,12 @@
       Title="Status">
 
     <Grid Background="#F8F9FA">
-        <Grid Margin="0,0,0,349.6" Background="White">
+        <Grid Background="White" Height="60" VerticalAlignment="Top">
             <Image HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top"
                    Width="40" Source="/Submission_of_Applications_Kylosov;component/logo.png"/>
-            <Label Content="Электронная приемная компания" HorizontalAlignment="Left" Margin="55,1,0,0"
-                   VerticalAlignment="Top" FontWeight="Bold" FontSize="19" />
-            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" HorizontalAlignment="Left" Margin="55,24,0,0" VerticalAlignment="Top"/>
+            <Label Content="Электронная приемная компания" HorizontalAlignment="Left" Margin="55,0,0,24"
+                   VerticalAlignment="Bottom" FontWeight="Bold" FontSize="19" />
+            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" HorizontalAlignment="Left" Margin="55,0,0,10" VerticalAlignment="Bottom"/>
         </Grid>
         <Grid Margin="0,60,0,-0.4">
             <Label Content="Статус" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"  FontWeight="Bold"/>
@@ -22,25 +22,27 @@
                    Margin="10,41,0,0" VerticalAlignment="Top" />
             <Label Content="Отметить при наличии" HorizontalAlignment="Left" Margin="20, 67, 0, 0"
                    VerticalAlignment="Top" Background="{x:Null}" FontSize="10"  Foreground="Red"/>
-            <CheckBox Content="ребенок-сирота/ребенок, оставшийся без попечения родителей" Margin="22,90,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+            <CheckBox x:Name="cb1" Content="ребенок-сирота/ребенок, оставшийся без попечения родителей" Margin="22,90,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
                       />
-            <CheckBox Content="инвалид" Margin="22,105,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+            <CheckBox x:Name="cb2" Content="инвалид" Margin="22,105,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
           />
-            <CheckBox Content="малообеспеченный" Margin="22,120,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+            <CheckBox x:Name="cb3" Content="малообеспеченный" Margin="22,120,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
           />
+            <Label Content="Приписное удостоверение (военный билет)" HorizontalAlignment="Left"
+                Margin="10,135,0,0" VerticalAlignment="Top" />
             <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="20,155,0,0" VerticalAlignment="Top"
                    Background="{x:Null}" FontSize="10" Foreground="Red" />
-            <RadioButton Content="имею (при нажатии данной кнопки необходимо ниже прикрепить сканы страниц документа)" Margin="22,175,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton Content="не имею" Margin="22,190,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Button Content="Продолжить" Click="Click_Next" HorizontalAlignment="Right" Margin="0,0,28,10" VerticalAlignment="Bottom" Width="150" Height="25" />
+            <RadioButton x:Name="rb1" IsChecked="True" Content="имею (при нажатии данной кнопки необходимо ниже прикрепить сканы страниц документа)" Margin="22,175,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rb2" Content="не имею" Margin="22,190,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
             <Label Content="Прикрепите сканы 1-ой и 2-ой страниц приписного удостоверения или военного билета (стр. 1-5, 8-13, 20-21) при их наличии"
                    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,230,0,0" FontSize="11" />
             <Label Content="(Формат документа должен быть PNG, JPEG или PDF, а максимальный размер каждого файла 5 МБ)" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Margin="30,250,0,0" FontSize="10" />
-            <TextBox Height="24" Margin="30,275,150,0" TextWrapping="Wrap"  Text="" VerticalAlignment="Top"/>
-            <Button Content="Выбрать ..." Margin="649,275,28,51" />
-            <Label Content="Приписное удостоверение (военный билет)" HorizontalAlignment="Left"
-                Margin="10,135,0,0" VerticalAlignment="Top" />
+            <TextBox x:Name="path" Height="24" Margin="30,275,150,0" TextWrapping="Wrap"  Text="" VerticalAlignment="Top"/>
+            <Button Content="Выбрать ..." Margin="0,275,28,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="115" Click="Button_Click" />
+
+            <Button Content="Продолжить" Click="Click_Next" Margin="614,315,28,0" VerticalAlignment="Top" Height="25" />
         </Grid>
     </Grid>
 </Page>
